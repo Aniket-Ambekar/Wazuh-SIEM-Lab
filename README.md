@@ -56,14 +56,6 @@ This project demonstrates end-to-end deployment of a Wazuh SIEM environment and 
 
 ---
 
-## 📄 Documentation & Deliverables
-- `deployment-steps.md`
-- `detection-scenarios.md`
-- `fim-alert-sample.json`
-- `sysmon-events.log`
-
----
-
 ## 🎯 Key Learnings
 - Hands-on SIEM deployment experience  
 - Understanding of alert pipelines  
