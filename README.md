@@ -61,7 +61,6 @@ This project demonstrates end-to-end deployment of a Wazuh SIEM environment and 
 - `detection-scenarios.md`
 - `fim-alert-sample.json`
 - `sysmon-events.log`
-- `nmap-scan-alerts.png` (optional screenshot)
 
 ---
 
