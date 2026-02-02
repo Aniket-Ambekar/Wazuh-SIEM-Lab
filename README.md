@@ -1,63 +1,74 @@
-# Wazuh SIEM Lab – Deployment, Detection & Alert Triage
+# 🛡️ Security Incident Detection & Response Lab (SIEM)
 
-## 📌 Objective
-This project demonstrates end-to-end deployment of a Wazuh SIEM environment and detection of simulated security events through log analysis, FIM, IDS rules, and Sysmon integration.
-
-## 🏗️ Environment Setup
-- **Wazuh Manager:** Ubuntu 22.04 LTS  
-- **Endpoints:** Windows 10 (agents installed)  
-- **Tools:** Sysmon, Nmap, PowerShell, Wazuh Dashboard  
-
-## 🔧 Configuration Performed
-### 1. Wazuh Manager Setup
-- Installed Wazuh Manager + Filebeat + Dashboard  
-- Enabled security modules (FIM, IDS, Sysmon integration)
-
-### 2. Agent Deployment
-- Installed Wazuh Windows agents  
-- Connected agents to manager (verified through dashboard)
-
-### 3. Sysmon Integration
-- Installed Sysmon with SwiftOnSecurity config  
-- Confirmed event forwarding to Wazuh
+## Project Summary
+This project demonstrates hands-on experience with Security Incident Detection and Response using Wazuh SIEM in a home lab environment. The lab focuses on defensive monitoring, alert triage, investigation, impact assessment, and remediation planning across Windows 11 and Linux systems on the same internal network.
 
 ---
 
-## 🛡️ Detection Scenarios
-
-### **Scenario 1: Unauthorized File Modification (FIM)**
-- Created/modifed sensitive files  
-- Wazuh FIM generated alerts  
-- Verified integrity hashes + timestamps  
-
-### **Scenario 2: Port Scanning (IDS)**
-- Conducted Nmap scan from attacker machine  
-- Wazuh IDS triggered OSSEC rule alerts  
-- Identified source IP + scan type  
-
-### **Scenario 3: Suspicious Process Execution (Sysmon)**
-- Executed encoded PowerShell command  
-- Sysmon events forwarded → Wazuh caught:
-  - Process creation (Event ID 1)  
-  - Network connection events  
-
-### **Scenario 4: Brute-Force Authentication Attempts**
-- Simulated multiple failed logins  
-- Wazuh generated brute force alerts  
+## Lab Environment
+- SIEM: Wazuh
+- Endpoints: Windows 11 VM, Linux VM
+- Network: Internal / Home Wi-Fi
+- Monitoring: Agent-based
 
 ---
 
-## 🧪 Alert Triage Workflow
-1. **Identify alert rule & description**  
-2. **Review source → user → process → hash**  
-3. **Correlate Sysmon + event logs**  
-4. **Determine if event is malicious or benign**  
-5. **Document evidence & conclusions**
+## JD Mapping
+
+### Knowledge of the Cyber Threat Landscape
+- Monitored authentication activity and system events
+- Assessed potential risks such as unauthorized access and privilege misuse
+
+![Security Events](screenshots/security-events.png)
 
 ---
 
-## 🎯 Key Learnings
-- Hands-on SIEM deployment experience  
-- Understanding of alert pipelines  
-- Ability to triage alerts using logs + Sysmon  
-- Basic detection engineering concepts  
+### Experience with Information Security
+- Centralized log collection using SIEM
+- Visibility into endpoint activity and integrity monitoring
+
+![Agents Dashboard](screenshots/agents-dashboard.png)
+
+---
+
+## Incident Handling Workflow (GCIH-Aligned)
+
+### Detection
+- SIEM alerts provided visibility into authentication and system activity
+
+### Investigation
+- Reviewed logs and correlated events across endpoints
+
+### Impact Analysis
+- Evaluated potential impact if abnormal activity went undetected
+
+### Remediation Decisions
+- Reviewed access controls and file integrity baselines
+- Recommended stronger authentication and monitoring improvements
+
+![File Integrity Monitoring](screenshots/fim-dashboard.png)
+
+---
+
+## Why This Maps to GCIH
+GCIH focuses on detecting incidents, investigating alerts, and performing containment and remediation.
+
+This project demonstrates:
+- Alert triage
+- Incident timeline analysis
+- Impact assessment
+- Remediation decision-making
+
+👉 This reflects GCIH capability without holding the certification.
+
+---
+
+## Screenshots
+
+### Overview Dashboard
+![Overview Dashboard](screenshots/overview-dashboard.png)
+
+---
+
+## Author
+Aniket Ambekar
